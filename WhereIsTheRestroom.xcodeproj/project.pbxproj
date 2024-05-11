@@ -1,0 +1,449 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B60FE742BEE0DAE00400E52 /* WhereIsTheRestroomApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B60FE732BEE0DAE00400E52 /* WhereIsTheRestroomApp.swift */; };
+		2B60FE762BEE0DAE00400E52 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B60FE752BEE0DAE00400E52 /* ContentView.swift */; };
+		2B60FE782BEE0DAF00400E52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B60FE772BEE0DAF00400E52 /* Assets.xcassets */; };
+		2B60FE7B2BEE0DAF00400E52 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B60FE7A2BEE0DAF00400E52 /* Preview Assets.xcassets */; };
+		2B60FE852BEE108B00400E52 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B60FE842BEE108B00400E52 /* Coordinator.swift */; };
+		2B60FE932BEE6E0000400E52 /* ToiletInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B60FE922BEE6E0000400E52 /* ToiletInfoView.swift */; };
+		2B60FE952BEE873A00400E52 /* PathFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B60FE942BEE873A00400E52 /* PathFinder.swift */; };
+		2B60FE972BEF23D400400E52 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B60FE962BEF23D400400E52 /* Location.swift */; };
+		2B60FEA22BEFC4C800400E52 /* seoul_subway_toilet.csv in Resources */ = {isa = PBXBuildFile; fileRef = 2B60FEA12BEFC4C800400E52 /* seoul_subway_toilet.csv */; };
+		82C1C634DC6180B5D235F00A /* Pods_WhereIsTheRestroom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1C8302975EC3DE01E7FD95F /* Pods_WhereIsTheRestroom.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2255F4C688FA57E4DD4DB5CB /* Pods-WhereIsTheRestroom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhereIsTheRestroom.debug.xcconfig"; path = "Target Support Files/Pods-WhereIsTheRestroom/Pods-WhereIsTheRestroom.debug.xcconfig"; sourceTree = "<group>"; };
+		2B60FE702BEE0DAE00400E52 /* WhereIsTheRestroom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereIsTheRestroom.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B60FE732BEE0DAE00400E52 /* WhereIsTheRestroomApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereIsTheRestroomApp.swift; sourceTree = "<group>"; };
+		2B60FE752BEE0DAE00400E52 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2B60FE772BEE0DAF00400E52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B60FE7A2BEE0DAF00400E52 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2B60FE812BEE0FFB00400E52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2B60FE842BEE108B00400E52 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		2B60FE922BEE6E0000400E52 /* ToiletInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToiletInfoView.swift; sourceTree = "<group>"; };
+		2B60FE942BEE873A00400E52 /* PathFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathFinder.swift; sourceTree = "<group>"; };
+		2B60FE962BEF23D400400E52 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		2B60FEA12BEFC4C800400E52 /* seoul_subway_toilet.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = seoul_subway_toilet.csv; sourceTree = "<group>"; };
+		DD1AF29B20AA2E611BD070A4 /* Pods-WhereIsTheRestroom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhereIsTheRestroom.release.xcconfig"; path = "Target Support Files/Pods-WhereIsTheRestroom/Pods-WhereIsTheRestroom.release.xcconfig"; sourceTree = "<group>"; };
+		E1C8302975EC3DE01E7FD95F /* Pods_WhereIsTheRestroom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhereIsTheRestroom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B60FE6D2BEE0DAE00400E52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82C1C634DC6180B5D235F00A /* Pods_WhereIsTheRestroom.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2797D03A2BE9C5C695466DD0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E1C8302975EC3DE01E7FD95F /* Pods_WhereIsTheRestroom.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2B60FE672BEE0DAE00400E52 = {
+			isa = PBXGroup;
+			children = (
+				2B60FE722BEE0DAE00400E52 /* WhereIsTheRestroom */,
+				2B60FE712BEE0DAE00400E52 /* Products */,
+				41DAE23C1A65F09246866BE1 /* Pods */,
+				2797D03A2BE9C5C695466DD0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2B60FE712BEE0DAE00400E52 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B60FE702BEE0DAE00400E52 /* WhereIsTheRestroom.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2B60FE722BEE0DAE00400E52 /* WhereIsTheRestroom */ = {
+			isa = PBXGroup;
+			children = (
+				2B60FE812BEE0FFB00400E52 /* Info.plist */,
+				2B60FE732BEE0DAE00400E52 /* WhereIsTheRestroomApp.swift */,
+				2B60FE752BEE0DAE00400E52 /* ContentView.swift */,
+				2B60FE922BEE6E0000400E52 /* ToiletInfoView.swift */,
+				2B60FE842BEE108B00400E52 /* Coordinator.swift */,
+				2B60FE942BEE873A00400E52 /* PathFinder.swift */,
+				2B60FE962BEF23D400400E52 /* Location.swift */,
+				2B60FE772BEE0DAF00400E52 /* Assets.xcassets */,
+				2B60FEA12BEFC4C800400E52 /* seoul_subway_toilet.csv */,
+				2B60FE792BEE0DAF00400E52 /* Preview Content */,
+			);
+			path = WhereIsTheRestroom;
+			sourceTree = "<group>";
+		};
+		2B60FE792BEE0DAF00400E52 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2B60FE7A2BEE0DAF00400E52 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		41DAE23C1A65F09246866BE1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2255F4C688FA57E4DD4DB5CB /* Pods-WhereIsTheRestroom.debug.xcconfig */,
+				DD1AF29B20AA2E611BD070A4 /* Pods-WhereIsTheRestroom.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B60FE6F2BEE0DAE00400E52 /* WhereIsTheRestroom */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B60FE7E2BEE0DAF00400E52 /* Build configuration list for PBXNativeTarget "WhereIsTheRestroom" */;
+			buildPhases = (
+				8A76E6E1A1017707F0DBF369 /* [CP] Check Pods Manifest.lock */,
+				2B60FE6C2BEE0DAE00400E52 /* Sources */,
+				2B60FE6D2BEE0DAE00400E52 /* Frameworks */,
+				2B60FE6E2BEE0DAE00400E52 /* Resources */,
+				04F876FC4A290D8418D7FCF9 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WhereIsTheRestroom;
+			productName = WhereIsTheRestroom;
+			productReference = 2B60FE702BEE0DAE00400E52 /* WhereIsTheRestroom.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2B60FE682BEE0DAE00400E52 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					2B60FE6F2BEE0DAE00400E52 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = 2B60FE6B2BEE0DAE00400E52 /* Build configuration list for PBXProject "WhereIsTheRestroom" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2B60FE672BEE0DAE00400E52;
+			productRefGroup = 2B60FE712BEE0DAE00400E52 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2B60FE6F2BEE0DAE00400E52 /* WhereIsTheRestroom */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B60FE6E2BEE0DAE00400E52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B60FE7B2BEE0DAF00400E52 /* Preview Assets.xcassets in Resources */,
+				2B60FEA22BEFC4C800400E52 /* seoul_subway_toilet.csv in Resources */,
+				2B60FE782BEE0DAF00400E52 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04F876FC4A290D8418D7FCF9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WhereIsTheRestroom/Pods-WhereIsTheRestroom-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WhereIsTheRestroom/Pods-WhereIsTheRestroom-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WhereIsTheRestroom/Pods-WhereIsTheRestroom-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A76E6E1A1017707F0DBF369 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WhereIsTheRestroom-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B60FE6C2BEE0DAE00400E52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B60FE762BEE0DAE00400E52 /* ContentView.swift in Sources */,
+				2B60FE742BEE0DAE00400E52 /* WhereIsTheRestroomApp.swift in Sources */,
+				2B60FE952BEE873A00400E52 /* PathFinder.swift in Sources */,
+				2B60FE852BEE108B00400E52 /* Coordinator.swift in Sources */,
+				2B60FE972BEF23D400400E52 /* Location.swift in Sources */,
+				2B60FE932BEE6E0000400E52 /* ToiletInfoView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2B60FE7C2BEE0DAF00400E52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2B60FE7D2BEE0DAF00400E52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2B60FE7F2BEE0DAF00400E52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2255F4C688FA57E4DD4DB5CB /* Pods-WhereIsTheRestroom.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WhereIsTheRestroom/Preview Content\"";
+				DEVELOPMENT_TEAM = 8HM2XMG9QM;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WhereIsTheRestroom/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "현재 위치 접근 권한";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "현재 위치 접근 권한";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "사용자의 위치를 받습니다";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = WhereIsTheRestroom.WhereIsTheRestroom;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2B60FE802BEE0DAF00400E52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD1AF29B20AA2E611BD070A4 /* Pods-WhereIsTheRestroom.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WhereIsTheRestroom/Preview Content\"";
+				DEVELOPMENT_TEAM = 8HM2XMG9QM;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WhereIsTheRestroom/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "현재 위치 접근 권한";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "현재 위치 접근 권한";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "사용자의 위치를 받습니다";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = WhereIsTheRestroom.WhereIsTheRestroom;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B60FE6B2BEE0DAE00400E52 /* Build configuration list for PBXProject "WhereIsTheRestroom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B60FE7C2BEE0DAF00400E52 /* Debug */,
+				2B60FE7D2BEE0DAF00400E52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B60FE7E2BEE0DAF00400E52 /* Build configuration list for PBXNativeTarget "WhereIsTheRestroom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B60FE7F2BEE0DAF00400E52 /* Debug */,
+				2B60FE802BEE0DAF00400E52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2B60FE682BEE0DAE00400E52 /* Project object */;
+}
