@@ -186,7 +186,6 @@ class Coordinator: NSObject, NMFMapViewOptionDelegate, NMCClusterMarkerUpdater, 
         DispatchQueue.main.async {
             do {
                 if let path = Bundle.main.path(forResource: self.CSV_ASSET_NAME, ofType: "csv") {
-                    print("??")
                     let contents = try String(contentsOfFile: path, encoding: .utf8)
                     let lines = contents.components(separatedBy: .newlines)
                     for (i, line) in lines.enumerated() {
@@ -200,85 +199,54 @@ class Coordinator: NSObject, NMFMapViewOptionDelegate, NMCClusterMarkerUpdater, 
                         let currentCoordinate = Location().locationManager.location?.coordinate
                         
                         // 두 지점의 위도와 경도
-                        let coordinate1 = CLLocationCoordinate2D(latitude: currentCoordinate?.latitude ?? 0.0, longitude: currentCoordinate?.longitude ?? 0.0) // 샌프란시스코
+                        let coordinate1 = CLLocationCoordinate2D(latitude: currentCoordinate?.latitude ?? 0.0, longitude: currentCoordinate?.longitude ?? 0.0)
                         
-                        let coordinate2 = CLLocationCoordinate2D(latitude: Double(split[21]) ?? 0.0, longitude: Double(split[22]) ?? 0.0) // 로스앤젤레스
+                        let coordinate2 = CLLocationCoordinate2D(latitude: Double(split[21]) ?? 0.0, longitude: Double(split[22]) ?? 0.0)
                         
                         // CLLocation 객체 생성
                         let location1 = CLLocation(latitude: coordinate1.latitude, longitude: coordinate1.longitude)
                         let location2 = CLLocation(latitude: coordinate2.latitude, longitude: coordinate2.longitude)
                         
                         let distanceInMeters = location1.distance(from: location2)
-                        
-                        print("\(split[3]): lat\(split[21]), lng: \(split[22])")
-                        let key = ItemKey(cases: i, position: NMGLatLng(lat: Double(split[21])  ?? 0.0, lng: Double(split[22]) ?? 0.0), distance: distanceInMeters)
-//                        let itemData = ItemData(serialNumber: split[0],
-//                                                category: split[1], // 공중화장실 B
-//                                                line: Int(split[2]) ?? 0, // 호선 C
-//                                                toiletName: split[3], // 화장실명 D
-//                                                roadAddress: split[4], // 도로명주소 E
-//                                                landLotAddress: split[5],
-//                                                maleToiletCount: Int(split[7]) ?? 0,
-//                                                maleUrinalCount: Int(split[8]) ?? 0,
-//                                                maleDisabledToiletCount: Int(split[9]) ?? 0,
-//                                                maleDisabledUrinalCount: Int(split[10]) ?? 0,
-//                                                maleChildrenToiletCount: Int(split[11]) ?? 0,
-//                                                maleChildrenUrinalCount: Int(split[12]) ?? 0,
-//                                                femaleToiletCount: Int(split[13]) ?? 0,
-//                                                femaleDisabledToiletCount: Int(split[14]) ?? 0,
-//                                                femaleChildrenToiletCount: Int(split[15]) ?? 0,
-//                                                managementAgency: split[16],
-//                                                phoneNumber: split[17],
-//                                                openHours: split[18],
-//                                                toiletDetailedLocation: split[19],
-//                                                toiletDetailedLocationInGate: split[20],
-//                                                latitude: Double(split[21]) ?? 0.0,
-//                                                longitude: Double(split[22]) ?? 0.0,
-//                                                toiletInstallationPlaceType: split[24],
-//                                                emergencyBellInstallation: (split[26] == "Y"),
-//                                                entranceCCTVInstallation: (split[27] == "Y"),
-//                                                diaperChangingTableInstallationMaleToilet: (split[28] == "Y"),
-//                                                diaperChangingTableInstallationMaleDisabledToilet: (split[29] == "Y"),
-//                                                diaperChangingTableInstallationFemaleToilet: (split[30] == "Y"),
-//                                                diaperChangingTableInstallationFemaleDisabledToilet: (split[31] == "Y"),
-//                                                remodelingYearMonth: split[32],
-//                                                dataStandardDate: split[33])
-                        
-                        let itemData = ItemData(serialNumber: split[0],
-                                                category: split[1],
-                                                line: Int(split[2]),
-                                                toiletName: split[3],
-                                                roadAddress: split[4],
-                                                landLotAddress: split[5],
-                                                maleToiletCount: Int(split[7]),
-                                                maleUrinalCount: Int(split[8]),
-                                                maleDisabledToiletCount: Int(split[9]),
-                                                maleDisabledUrinalCount: Int(split[10]),
-                                                maleChildrenToiletCount: Int(split[11]),
-                                                maleChildrenUrinalCount: Int(split[12]),
-                                                femaleToiletCount: Int(split[13]),
-                                                femaleDisabledToiletCount: Int(split[14]),
-                                                femaleChildrenToiletCount: Int(split[15]),
-                                                managementAgency: split[16],
-                                                phoneNumber: split[17],
-                                                openHours: split[18],
-                                                toiletDetailedLocation: split[19],
-                                                toiletDetailedLocationInGate: split[20],
-                                                latitude: Double(split[21]),
-                                                longitude: Double(split[22]),
-                                                toiletInstallationPlaceType: split[24],
-                                                emergencyBellInstallation: (split[26] == "Y"),
-                                                entranceCCTVInstallation: (split[27] == "Y"),
-                                                diaperChangingTableInstallationMaleToilet: (split[28] == "Y"),
-                                                diaperChangingTableInstallationMaleDisabledToilet: (split[29] == "Y"),
-                                                diaperChangingTableInstallationFemaleToilet: (split[30] == "Y"),
-                                                diaperChangingTableInstallationFemaleDisabledToilet: (split[31] == "Y"),
-                                                remodelingYearMonth: split[32],
-                                                dataStandardDate: split[33])
+                        if let lat = Double(split[21]), let lng = Double(split[22]) {
+                            let key = ItemKey(cases: i, position: NMGLatLng(lat: lat, lng: lng), distance: distanceInMeters)
+                            let itemData = ItemData(serialNumber: split[0],
+                                                    category: split[1],
+                                                    line: Int(split[2]),
+                                                    toiletName: split[3],
+                                                    roadAddress: split[4],
+                                                    landLotAddress: split[5],
+                                                    maleToiletCount: Int(split[7]),
+                                                    maleUrinalCount: Int(split[8]),
+                                                    maleDisabledToiletCount: Int(split[9]),
+                                                    maleDisabledUrinalCount: Int(split[10]),
+                                                    maleChildrenToiletCount: Int(split[11]),
+                                                    maleChildrenUrinalCount: Int(split[12]),
+                                                    femaleToiletCount: Int(split[13]),
+                                                    femaleDisabledToiletCount: Int(split[14]),
+                                                    femaleChildrenToiletCount: Int(split[15]),
+                                                    managementAgency: split[16],
+                                                    phoneNumber: split[17],
+                                                    openHours: split[18],
+                                                    toiletDetailedLocation: split[19],
+                                                    toiletDetailedLocationInGate: split[20],
+                                                    latitude: Double(split[21]),
+                                                    longitude: Double(split[22]),
+                                                    toiletInstallationPlaceType: split[24],
+                                                    emergencyBellInstallation: (split[26] == "Y"),
+                                                    entranceCCTVInstallation: (split[27] == "Y"),
+                                                    diaperChangingTableInstallationMaleToilet: (split[28] == "Y"),
+                                                    diaperChangingTableInstallationMaleDisabledToilet: (split[29] == "Y"),
+                                                    diaperChangingTableInstallationFemaleToilet: (split[30] == "Y"),
+                                                    diaperChangingTableInstallationFemaleDisabledToilet: (split[31] == "Y"),
+                                                    remodelingYearMonth: split[32],
+                                                    dataStandardDate: split[33])
 
-                        
-                        print(itemData.toiletName)
-                        self.keyTagMap[key] = itemData
+                            
+                            print(itemData.toiletName)
+                            self.keyTagMap[key] = itemData
+
+                        }
                     }
                 }
                 
@@ -310,11 +278,9 @@ class Coordinator: NSObject, NMFMapViewOptionDelegate, NMCClusterMarkerUpdater, 
         marker.captionText = String(info.size)
         marker.captionTextSize = 16
         marker.touchHandler = { (overlay: NMFOverlay) -> Bool in
-            print("마커 터치")
             let cameraUpdate = NMFCameraUpdate(scrollTo: NMGLatLng(lat: info.position.lat, lng: info.position.lng))
             cameraUpdate.animation = .easeIn
             self.view.mapView.moveCamera(cameraUpdate)
-            self.view.mapView.zoomLevel = 0.3
             return true
         }
         
