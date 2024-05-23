@@ -60,6 +60,7 @@ func updateClusterMarker(_ info: NMCClusterMarkerInfo, _ marker: NMFMarker) {
 
 <div align="center">
   <img src="https://github.com/iOS-Developer-KR/WhereIsTheRestroom/blob/main/Asset/Simulator%20Screenshot%20-%20iPhone%2015%20Plus%20-%202024-05-23%20at%2011.03.31.png" width="300" height="600"/>
+</div>
 
 ## 일반 마커
 일반 마커를 탭하였을 때 특정 뷰를 띄우기 위해 코드를 만들었습니다.
@@ -137,6 +138,11 @@ func distance(to coordinate1: NMGLatLng, coordinate2: NMGLatLng) -> Double {
 }
 ```
 
+### 길찾기를 위한 기본 설정
+<div align="center">
+  <img src="https://github.com/iOS-Developer-KR/WhereIsTheRestroom/blob/main/Asset/스크린샷%202024-05-23%20오전%2011.22.21.png" width="300" height="600"/>
+</div>
+
 ### 네이버맵으로 길찾기
 ```swift
 func NaverMap(lat: Double, lng: Double) {
@@ -207,3 +213,4 @@ func TMap(lat:Double, lng:Double) {
 
 <div align="center">
   <img src="https://github.com/iOS-Developer-KR/WhereIsTheRestroom/blob/main/Asset/Simulator%20Screenshot%20-%20iPhone%2015%20Plus%20-%202024-05-23%20at%2011.03.42.png" width="300" height="600"/>
+</div>
