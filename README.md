@@ -109,7 +109,7 @@ func HStackTextView(text: String) -> some View {
 }
 ```
 
-## 거리 계산
+### 거리 계산
 현 위치의 좌표와 목적지의 좌표 사이의 거리를 수직으로 뻗었을 때의 거리를 의미하며 실제 경로의 거리와 차이가 날 수 있습니다.
 ```swift
 func distance(to coordinate1: NMGLatLng, coordinate2: NMGLatLng) -> Double {
@@ -137,5 +137,73 @@ func distance(to coordinate1: NMGLatLng, coordinate2: NMGLatLng) -> Double {
 }
 ```
 
+### 네이버맵으로 길찾기
+```swift
+func NaverMap(lat: Double, lng: Double) {
+    // URL Scheme을 사용하여 네이버맵 앱을 열고 자동차 경로를 생성합니다.
+    guard let url = URL(string: "nmap://route/car?dlat=\(lat)&dlng=\(lng)&appname=kr.co.kepco.ElectricCar") else { return }
+    // 앱 스토어 URL을 설정합니다.
+    guard let appStoreURL = URL(string: "http://itunes.apple.com/app/id311867728?mt=8") else { return }
+    
+    if UIApplication.shared.canOpenURL(url) {
+        // 네이버맵 앱이 설치되어 있는 경우 앱을 엽니다.
+        UIApplication.shared.open(url)
+    } else {
+        // 네이버맵 앱이 설치되어 있지 않은 경우 앱 스토어로 이동합니다.
+        UIApplication.shared.open(appStoreURL)
+    }
+}
+```
+
+### 카카오맵으로 길찾기
+```swift
+func KaKaoMap(lat: Double, lng: Double) {
+    // URL Scheme을 사용하여 kakaomap 앱 열고 경로 생성합니다
+    guard let url = URL(string: "kakaomap://route?ep=\(lat),\(lng)&by=CAR") else { return }
+    
+    // Kakaomap 앱의 App Store URL 생성
+    guard let appStoreUrl = URL(string: "itms-apps://itunes.apple.com/app/id304608425") else { return }
+    
+    let urlString = "kakaomap://open"
+    
+    // Kakaomap 앱이 설치되어 있는지 확인하고 URL 열기
+    if let appUrl = URL(string: urlString) {
+        if UIApplication.shared.canOpenURL(appUrl) {
+            UIApplication.shared.open(url)
+        } else {
+            // Kakaomap 앱이 설치되어 있지 않은 경우 App Store URL 열기
+            print("안깔려있는데")
+            UIApplication.shared.open(appStoreUrl)
+        }
+    }
+}
+```
+
+### 티맵으로 길찾기
+```swift
+func TMap(lat:Double, lng:Double) {
+    // URL Scheme을 사용하여 티맵 앱을 열고 자동차 경로를 생성합니다.
+    let urlStr = "tmap://route?rGoName=목적지&rGoX=\(lng)&rGoY=\(lat)"
+    
+    // URL 문자열을 인코딩하여 올바른 형식으로 변환합니다.
+    guard let encodedStr = urlStr.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return }
+    
+    // 인코딩된 URL 문자열을 URL 객체로 변환합니다.
+    guard let url = URL(string: encodedStr) else { return }
+    
+    // TMap 앱이 설치되어 있는지 확인합니다.
+    if UIApplication.shared.canOpenURL(url) {
+        // TMap 앱을 엽니다.
+        UIApplication.shared.open(url)
+    } else {
+        // TMap 앱이 설치되어 있지 않은 경우 앱 스토어로 이동합니다.
+        guard let appStoreURL = URL(string: "http://itunes.apple.com/app/id431589174") else { return }
+        UIApplication.shared.open(appStoreURL)
+    }
+}
+```
+
+
+
 <div align="center">
-  <img src="https://github.com/iOS-Developer-KR/WhereIsTheRestroom/blob/main/Asset/Simulator%20Screenshot%20-%20iPhone%2015%20Plus%20-%202024-05-23%20at%2011.03.31.png" width="300" height="600"/>
+  <img src="https://github.com/iOS-Developer-KR/WhereIsTheRestroom/blob/main/Asset/Simulator%20Screenshot%20-%20iPhone%2015%20Plus%20-%202024-05-23%20at%2011.03.42.png" width="300" height="600"/>
