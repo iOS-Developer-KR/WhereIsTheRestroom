@@ -140,7 +140,7 @@ func distance(to coordinate1: NMGLatLng, coordinate2: NMGLatLng) -> Double {
 
 ### 길찾기를 위한 기본 설정
 <div align="center">
-  <img src="https://github.com/iOS-Developer-KR/WhereIsTheRestroom/blob/main/Asset/스크린샷%202024-05-23%20오전%2011.22.21.png" width="300" height="600"/>
+  <img src="https://github.com/iOS-Developer-KR/WhereIsTheRestroom/blob/main/Asset/스크린샷%202024-05-23%20오전%2011.22.21.png"/>
 </div>
 
 ### 네이버맵으로 길찾기
